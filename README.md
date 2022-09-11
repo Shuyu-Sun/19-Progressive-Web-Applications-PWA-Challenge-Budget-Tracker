@@ -8,8 +8,8 @@ https://github.com/Shuyu-Sun/19-Progressive-Web-Applications-PWA-Challenge-Budge
 
 # Table of Contents
 
-- Restaurateur - Deployed Application
-- Restaurateur - Github Repository
+- Deployed Application
+- Github Repository
 - Description
 - User Story
 - Acceptance Criteria
@@ -18,7 +18,6 @@ https://github.com/Shuyu-Sun/19-Progressive-Web-Applications-PWA-Challenge-Budge
 - Installation
 - Usage
 - Contact
-- Screenshots
 
 # User Story
 
@@ -33,31 +32,11 @@ SO THAT my account balance is accurate when I am traveling
 # Acceptance Criteria
 
 ```
-Your project should fulfill the following requirements:
-
-Use React for the front end.
-
-Use GraphQL with a Node.js and Express.js server.
-
-Use MongoDB and the Mongoose ODM for the database.
-
-Use queries and mutations for retrieving, adding, updating, and deleting data.
-
-Be deployed using Heroku (with data).
-
-Have a polished UI.
-
-Be responsive.
-
-Be interactive (i.e., accept and respond to user input).
-
-Include authentication (JWT).
-
-Protect sensitive API key information on the server.
-
-Have a clean repository that meets quality coding standards (file structure, naming conventions, best practices for class and id naming conventions, indentation, high-quality comments, etc.).
-
-Have a high-quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
+GIVEN a budget tracker without an internet connection
+WHEN the user inputs an expense or deposit
+THEN they will receive a notification that they have added an expense or deposit
+WHEN the user reestablishes an internet connection
+THEN the deposits or expenses added while they were offline are added to their transaction history and their totals are updated
 
 ```
 
@@ -88,5 +67,3 @@ Run the following commands in the command-line in the root of the folder:
 
 # Contact
 - https://github.com/Shuyu-Sun - Shuyu Sun
-
-# Screenshots
