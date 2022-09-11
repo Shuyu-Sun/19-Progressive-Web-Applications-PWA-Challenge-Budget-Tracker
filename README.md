@@ -1,6 +1,6 @@
 # 19-Progressive-Web-Applications-PWA-Challenge-Budget-Tracker
 
-# Restaurateur - Github Repository
+# Github Repository
 
 https://github.com/Shuyu-Sun/19-Progressive-Web-Applications-PWA-Challenge-Budget-Tracker
 
