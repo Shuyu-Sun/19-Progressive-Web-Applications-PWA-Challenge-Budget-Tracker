@@ -27,21 +27,29 @@ function saveRecord(record) {
   store.add(record);
 }
 
-getAll.onsuccess = function() {
+function uploadData() {
+  const transaction = db.transaction("new_transaction", "readonly");
+  const store = transaction.objectStore("new_transaction");
+  const getAll = store.getAll();
+
+  getAll.onsuccess = function () {
     if (getAll.result.length > 0) {
-        fetch('/api/transaction', {
-            method: 'POST',
-            body: JSON.stringify(getAll.result),
-            headers: {
-                Accept: 'application/json, text/plain, */*',
-                'Content-Type': 'application/json'
-            }
-        })
-            .then(response => response.json())
-            .then(() => {
-                const transaction = db.transaction("new_trasaction", "readwrite");
-                const store = transaction.objectStore("new_trasaction");
-                store.clear();
-            });
-        }
-    };
+      fetch("/api/transaction", {
+        method: "POST",
+        body: JSON.stringify(getAll.result),
+        headers: {
+          Accept: "application/json, text/plain, */*",
+          "Content-Type": "application/json",
+        },
+      })
+        .then((response) => response.json())
+        .then(() => {
+          const transaction = db.transaction("new_trasaction", "readwrite");
+          const store = transaction.objectStore("new_trasaction");
+          store.clear();
+        });
+    }
+  };
+}
+
+window.addEventListener("online", uploadData);
